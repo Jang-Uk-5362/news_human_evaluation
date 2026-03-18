@@ -21,5 +21,5 @@ class EvaluationAdmin(admin.ModelAdmin):
         "submitted_at",
     )
     list_filter = ("annotator_id", "article_id", "q5_final_label", "submitted_at")
-    search_fields = ("annotator_id", "article_id", "sample_id", "q6_comment")
+    search_fields = ("annotator_id", "article_id", "sample_id")
     ordering = ("-submitted_at",)

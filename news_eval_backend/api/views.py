@@ -68,7 +68,6 @@ def evaluations(request):
                 q4_segment_1_label_quality=data.get("q4_segment_1_label_quality"),
                 q4_segment_2_label_quality=data.get("q4_segment_2_label_quality"),
                 q5_final_label=data["q5_final_label"],
-                q6_comment=data.get("q6_comment", ""),
             )
         except IntegrityError:
             return JsonResponse(

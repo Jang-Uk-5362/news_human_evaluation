@@ -29,5 +29,4 @@ export type EvaluationPayload = {
   q4_segment_1_label_quality?: number | null
   q4_segment_2_label_quality?: number | null
   q5_final_label: FinalLabel
-  q6_comment?: string
 }

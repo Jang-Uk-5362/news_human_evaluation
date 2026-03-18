@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Django / DB
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/

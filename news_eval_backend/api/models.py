@@ -54,7 +54,6 @@ class Evaluation(models.Model):
     q4_segment_2_label_quality = models.PositiveSmallIntegerField(null=True, blank=True)
 
     q5_final_label = models.CharField(max_length=16, choices=FinalLabel.choices)
-    q6_comment = models.TextField(blank=True, default="")
 
     submitted_at = models.DateTimeField(auto_now_add=True)
 

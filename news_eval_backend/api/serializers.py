@@ -23,7 +23,6 @@ class EvaluationCreateSerializer(serializers.Serializer):
     )
 
     q5_final_label = serializers.ChoiceField(choices=["F", "C", "M", "Unsure"])
-    q6_comment = serializers.CharField(allow_blank=True, required=False, default="")
 
     def validate(self, attrs):
         return attrs
@@ -39,5 +38,4 @@ class EvaluationReadSerializer(serializers.Serializer):
     q4_segment_1_label_quality = serializers.IntegerField(allow_null=True)
     q4_segment_2_label_quality = serializers.IntegerField(allow_null=True)
     q5_final_label = serializers.CharField()
-    q6_comment = serializers.CharField()
     submitted_at = serializers.DateTimeField()

@@ -23,7 +23,6 @@ export default function EvaluationForm({ sample, onSubmit }: Props) {
   const [q4_1, setQ4_1] = useState<number | null>(null)
   const [q4_2, setQ4_2] = useState<number | null>(null)
   const [q5, setQ5] = useState<FinalLabel>('Unsure')
-  const [q6, setQ6] = useState<string>('')
 
   const [submitting, setSubmitting] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
@@ -65,7 +64,6 @@ export default function EvaluationForm({ sample, onSubmit }: Props) {
       article_id: sample.article_id ?? null,
       q1_label_appropriateness: q1,
       q5_final_label: q5,
-      q6_comment: q6,
     }
 
     if (showMixedQuestions) {
@@ -92,7 +90,6 @@ export default function EvaluationForm({ sample, onSubmit }: Props) {
       setQ4_1(null)
       setQ4_2(null)
       setQ5('Unsure')
-      setQ6('')
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err))
     } finally {
@@ -178,17 +175,6 @@ export default function EvaluationForm({ sample, onSubmit }: Props) {
             <option value="M">M</option>
             <option value="Unsure">Unsure</option>
           </select>
-        </label>
-
-        <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-          <span style={{ fontWeight: 600 }}>Q6. Comment</span>
-          <textarea
-            value={q6}
-            onChange={(e) => setQ6(e.target.value)}
-            placeholder="comment..."
-            rows={4}
-            style={{ padding: 10, borderRadius: 8, border: '1px solid #d1d5db', resize: 'vertical' }}
-          />
         </label>
 
         <button
